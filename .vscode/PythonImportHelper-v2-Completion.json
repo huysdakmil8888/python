@@ -289,14 +289,6 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -329,6 +321,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "CreateView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
@@ -353,31 +353,6 @@
         "documentation": {}
     },
     {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "format_html",
-        "importPath": "django.utils.html",
-        "description": "django.utils.html",
-        "isExtraImport": true,
-        "detail": "django.utils.html",
-        "documentation": {}
-    },
-    {
-        "label": "modelformset_factory",
-        "importPath": "django.forms",
-        "description": "django.forms",
-        "isExtraImport": true,
-        "detail": "django.forms",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -387,35 +362,19 @@
         "documentation": {}
     },
     {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
         "isExtraImport": true,
-        "detail": "PIL",
+        "detail": "django.core.asgi",
         "documentation": {}
     },
     {
-        "label": "BytesIO",
-        "importPath": "io",
-        "description": "io",
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "io",
-        "documentation": {}
-    },
-    {
-        "label": "File",
-        "importPath": "django.core.files",
-        "description": "django.core.files",
-        "isExtraImport": true,
-        "detail": "django.core.files",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "catalog.views",
-        "description": "catalog.views",
-        "isExtraImport": true,
-        "detail": "catalog.views",
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -440,30 +399,6 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "Paginator",
-        "importPath": "django.core.paginator",
-        "description": "django.core.paginator",
-        "isExtraImport": true,
-        "detail": "django.core.paginator",
-        "documentation": {}
-    },
-    {
-        "label": "get_asgi_application",
-        "importPath": "django.core.asgi",
-        "description": "django.core.asgi",
-        "isExtraImport": true,
-        "detail": "django.core.asgi",
         "documentation": {}
     },
     {
@@ -504,6 +439,71 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "modelformset_factory",
+        "importPath": "django.forms",
+        "description": "django.forms",
+        "isExtraImport": true,
+        "detail": "django.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "django.core.files",
+        "description": "django.core.files",
+        "isExtraImport": true,
+        "detail": "django.core.files",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "catalog.views",
+        "description": "catalog.views",
+        "isExtraImport": true,
+        "detail": "catalog.views",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
         "documentation": {}
     },
     {
@@ -585,6 +585,285 @@
         "description": "accounts.views",
         "peekOfCode": "class loginView(CreateView):\n    # form_class = CustomUserCreationForm\n    # success_url = reverse_lazy(\"login\")\n    template_name = \"registration/login.html\"",
         "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "app.asgi",
+        "description": "app.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "app.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleMiddleware",
+        "kind": 6,
+        "importPath": "app.my_middleware",
+        "description": "app.my_middleware",
+        "peekOfCode": "class SimpleMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        # Code to be executed for each request before\n        # the view (and later middleware) are called.\n        login_url = reverse('login')\n        signup_url = reverse('signup')\n        home_url = reverse('home')\n        if request.path != login_url and not request.user.is_authenticated:",
+        "detail": "app.my_middleware",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-#*b9v!)4ff*l5ji-bk5y3w%25g@j!%a!5d%%99ybsz-pn)wba='\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-#*b9v!)4ff*l5ji-bk5y3w%25g@j!%a!5d%%99ybsz-pn)wba='\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'accounts',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'accounts',\n    'catalog',\n    # 'debug_toolbar'",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'app.my_middleware.SimpleMiddleware',  # new\n    # 'debug_toolbar.middleware.DebugToolbarMiddleware',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "ROOT_URLCONF = 'app.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        \"DIRS\": [BASE_DIR / \"templates\"],  # new\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        \"DIRS\": [BASE_DIR / \"templates\"],  # new\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'app.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'huy',\n        'USER': 'huy',\n        'PASSWORD': '',\n        'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'huy',\n        'USER': 'huy',\n        'PASSWORD': '',\n        'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote\n        'PORT': '5433',  # the default PostgreSQL port\n    }\n}",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]\n# Default primary key field type",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "STATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "EMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "EMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "MEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "app.settings",
+        "description": "app.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']",
+        "detail": "app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "app.urls",
+        "description": "app.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"accounts.urls\")),  # signup\n    path(\"accounts/\", include(\"django.contrib.auth.urls\")),  # login,logout\n    path(\"\", TemplateView.as_view(template_name=\"home.html\"), name=\"home\"),  # new\n    path(\"categories/\", include('catalog.urls')),\n]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n# if settings.DEBUG:\n#     import debug_toolbar\n#     urlpatterns = [",
+        "detail": "app.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "app.wsgi",
+        "description": "app.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "app.wsgi",
         "documentation": {}
     },
     {
@@ -808,7 +1087,7 @@
         "kind": 5,
         "importPath": "catalog.urls",
         "description": "catalog.urls",
-        "peekOfCode": "urlpatterns = [\n    path('/', category_list, name='category_list'),\n    path('categories/<int:pk>/', category_detail, name='category_detail'),\n    path('/create/', category_create, name='category_create'),\n    path('/<int:pk>/update/', category_update, name='category_update'),\n    path('categories/<int:pk>/delete/', category_delete, name='category_delete'),\n    path('/products', product_list, name='product_list'),\n    path('/products/<int:pk>/', product_detail, name='product_detail'),\n    path('/products/create/', product_create, name='product_create'),\n    path('/products/<int:pk>/update/', product_update, name='product_update'),",
+        "peekOfCode": "urlpatterns = [\n    path('', category_list, name='category_list'),\n    path('categories/<int:pk>/', category_detail, name='category_detail'),\n    path('create/', category_create, name='category_create'),\n    path('<int:pk>/update/', category_update, name='category_update'),\n    path('categories/<int:pk>/delete/', category_delete, name='category_delete'),\n    path('products', product_list, name='product_list'),\n    path('products/<int:pk>/', product_detail, name='product_detail'),\n    path('products/create/', product_create, name='product_create'),\n    path('products/<int:pk>/update/', product_update, name='product_update'),",
         "detail": "catalog.urls",
         "documentation": {}
     },
@@ -903,290 +1182,11 @@
         "documentation": {}
     },
     {
-        "label": "application",
-        "kind": 5,
-        "importPath": "user.asgi",
-        "description": "user.asgi",
-        "peekOfCode": "application = get_asgi_application()",
-        "detail": "user.asgi",
-        "documentation": {}
-    },
-    {
-        "label": "SimpleMiddleware",
-        "kind": 6,
-        "importPath": "user.my_middleware",
-        "description": "user.my_middleware",
-        "peekOfCode": "class SimpleMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        # Code to be executed for each request before\n        # the view (and later middleware) are called.\n        login_url = reverse('login')\n        signup_url = reverse('signup')\n        home_url = reverse('home')\n        if request.path != login_url and not request.user.is_authenticated:",
-        "detail": "user.my_middleware",
-        "documentation": {}
-    },
-    {
-        "label": "BASE_DIR",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-#*b9v!)4ff*l5ji-bk5y3w%25g@j!%a!5d%%99ybsz-pn)wba='\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-#*b9v!)4ff*l5ji-bk5y3w%25g@j!%a!5d%%99ybsz-pn)wba='\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEBUG",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ALLOWED_HOSTS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'accounts',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "INSTALLED_APPS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'accounts',\n    'catalog',\n    # 'debug_toolbar'",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MIDDLEWARE",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'user.my_middleware.SimpleMiddleware',  # new\n    # 'debug_toolbar.middleware.DebugToolbarMiddleware',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ROOT_URLCONF",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "ROOT_URLCONF = 'user.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        \"DIRS\": [BASE_DIR / \"templates\"],  # new\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TEMPLATES",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        \"DIRS\": [BASE_DIR / \"templates\"],  # new\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "WSGI_APPLICATION",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'user.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'huy',\n        'USER': 'huy',\n        'PASSWORD': '',\n        'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DATABASES",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': 'huy',\n        'USER': 'huy',\n        'PASSWORD': '',\n        'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote\n        'PORT': '5433',  # the default PostgreSQL port\n    }\n}",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_PASSWORD_VALIDATORS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LANGUAGE_CODE",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_I18N",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_TZ",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_URL",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "STATIC_URL = '/templates/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATICFILES_DIRS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_AUTO_FIELD",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGIN_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"home\"\nLOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGOUT_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = \"home\"  # new\n# mailhog setting\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "EMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'\nEMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_PORT",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "EMAIL_PORT = 1025  # Example: 587 for Gmail\nMEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "MEDIA_URL = '/uploads/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "INTERNAL_IPS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\nALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ALLOWED_HOSTS",
-        "kind": 5,
-        "importPath": "user.settings",
-        "description": "user.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']",
-        "detail": "user.settings",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "user.urls",
-        "description": "user.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"accounts/\", include(\"accounts.urls\")),  # signup\n    path(\"accounts/\", include(\"django.contrib.auth.urls\")),  # login,logout\n    path(\"\", TemplateView.as_view(template_name=\"home.html\"), name=\"home\"),  # new\n    path(\"categories\", include('catalog.urls')),\n]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n# if settings.DEBUG:\n#     import debug_toolbar\n#     urlpatterns = [",
-        "detail": "user.urls",
-        "documentation": {}
-    },
-    {
-        "label": "application",
-        "kind": 5,
-        "importPath": "user.wsgi",
-        "description": "user.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
-        "detail": "user.wsgi",
-        "documentation": {}
-    },
-    {
         "label": "main",
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'user.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "manage",
         "documentation": {}
     }
