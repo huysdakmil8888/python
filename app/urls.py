@@ -11,6 +11,8 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),  # login,logout
     path("", TemplateView.as_view(template_name="home.html"), name="home"),  # new
     path("categories/", include('catalog.urls')),
+    # path('ckeditor/', include('ckeditor_uploader.urls')),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

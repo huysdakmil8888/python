@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
-
+from django.urls import path, include
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'catalog',
+    'ckeditor',
+    'ckeditor_uploader',
     # 'debug_toolbar'
 
 ]
@@ -95,7 +97,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
-
+AUTH_USER_MODEL = 'accounts.User'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -146,8 +148,8 @@ EMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'
 EMAIL_PORT = 1025  # Example: 587 for Gmail
 
 
-MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = 'uploads/'  # show image
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads') # save image
 
 INTERNAL_IPS = [
     # ...
@@ -155,3 +157,4 @@ INTERNAL_IPS = [
     # ...
 ]
 ALLOWED_HOSTS = ['*']
+CKEDITOR_UPLOAD_PATH = 'ckeditor/'

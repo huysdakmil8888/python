@@ -1,7 +1,7 @@
 # categories/views.py
 
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Category,Product,Image
+from .models import *
 from .forms import CategoryForm,ProductForm,ImageFormSet
 from django.core.paginator import Paginator
 from .signals import categories_retrieved

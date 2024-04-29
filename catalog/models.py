@@ -1,15 +1,23 @@
 # categories/models.py
-
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 import os
 from PIL import Image as PilImage
 from io import BytesIO
 from django.core.files import File
+from ckeditor.fields import RichTextField
 
-class Category(models.Model):
+class itemBase(models.Model): # abstract base class
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    class Meta:
+        abstract = True
+
+class Category(itemBase):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='')
-    parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
+    image = models.ImageField(upload_to='categories/%Y/%m', null=True, blank=True)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -20,10 +28,11 @@ class Category(models.Model):
             os.remove(self.image.path)
         super().delete(*args, **kwargs)
 
-class Product(models.Model):
+class Product(itemBase):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='')
     categories = models.ManyToManyField(Category, related_name='products')
+    content = RichTextField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -57,6 +66,6 @@ class Product(models.Model):
         super().save(*args, **kwargs)
 
 
-class Image(models.Model):
+class Image(itemBase):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
     pic = models.FileField(upload_to='products/')

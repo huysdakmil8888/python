@@ -2,10 +2,13 @@ from django.contrib import admin
 from django.utils.html import format_html
 from .models import Category, Product, Image
 
+class CategoryInline(admin.TabularInline):  # or admin.StackedInline
+    model = Product.categories.through
+    extra = 0  # how many rows to show
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'parent', 'display_image')  # fields to display in list view
-    list_filter = ('category','parent')  # fields to filter by
-    search_fields = ('name', 'description', 'parent')  # fields to search by
+    list_filter = ('category',)  # fields to filter by
+    search_fields = ('name',)  # fields to search by
     # ordering = ('name',)  # default ordering
     raw_id_fields = ('parent',)  # fields to display as raw id fields
 
@@ -20,6 +23,8 @@ class CategoryAdmin(admin.ModelAdmin):
         return queryset
 
 class ProductAdmin(admin.ModelAdmin):
+    inlines = [CategoryInline]
+    exclude = ('categories',)
     list_display = ('name', 'display_image')  # fields to display in list view
     list_filter = ('name',)  # fields to filter by
     search_fields = ('name',)  # fields to search by
