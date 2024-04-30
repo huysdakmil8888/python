@@ -1,10 +1,25 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import Category, Product, Image
+from django.urls import path
+class CatalogAdminSite(admin.AdminSite):
+    site_header = 'Administration System'
+    site_title = 'Catalog Admin'
+    index_title = 'Catalog Admin Home'
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            # add your custom URLs here
+        ]
+        return custom_urls + urls
+
+admin_site = CatalogAdminSite()
 
 class CategoryInline(admin.TabularInline):  # or admin.StackedInline
     model = Product.categories.through
-    extra = 0  # how many rows to show
+    extra = 1  # how many rows to show
+    verbose_name_plural = "Belong to Categories"
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'parent', 'display_image')  # fields to display in list view
     list_filter = ('category',)  # fields to filter by
@@ -48,6 +63,6 @@ class ImageAdmin(admin.ModelAdmin):
         return format_html('<img src="{}" width="50" height="50" />', obj.pic.url)
         image.short_description = 'Image'
 
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Product, ProductAdmin)
-admin.site.register(Image, ImageAdmin)
+admin_site.register(Category, CategoryAdmin)
+admin_site.register(Product, ProductAdmin)
+admin_site.register(Image, ImageAdmin)

@@ -4,9 +4,10 @@ from django.urls import path, include, re_path  # new
 from django.views.generic.base import TemplateView  # new
 from django.conf import settings
 from django.conf.urls.static import static
+from catalog.admin import admin_site
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("admin/", admin_site.urls),
     path("accounts/", include("accounts.urls")),  # signup
     path("accounts/", include("django.contrib.auth.urls")),  # login,logout
     path("", TemplateView.as_view(template_name="home.html"), name="home"),  # new
