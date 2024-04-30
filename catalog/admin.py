@@ -6,6 +6,7 @@ class CatalogAdminSite(admin.AdminSite):
     site_header = 'Administration System'
     site_title = 'Catalog Admin'
     index_title = 'Catalog Admin Home'
+    index_template = 'admin/index.html'
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
