@@ -129,10 +129,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'templates/static/'
+STATIC_URL = 'templates/themes/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'templates/themes'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
