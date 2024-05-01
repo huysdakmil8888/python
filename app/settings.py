@@ -129,7 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'templates/themes/'
+STATIC_URL = 'fake-url/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'templates/themes'),
