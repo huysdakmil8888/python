@@ -18,12 +18,19 @@
 <header>
 {% include 'layout/navbar.html' %}
 </header>
-<div class="container p-4" style="min-height:600px">
+<div class="container-fluid mb-5">
   <div class="row">
-    {% block content %} {% endblock %}
+    <div class="col-md-12">
+      {% block content %} {% endblock %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 p-0 m-0 mt-3">
+      {% block slider %} {% endblock %}
+    </div>
   </div>
 </div>
-<footer style="background-color: black; color: white; text-align: center; padding: 10px;">
+<footer class="bg-dark text-white text-center p-2">
   <p class="">&copy; 2024 Django</p>
 </footer>
 </body>

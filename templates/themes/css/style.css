@@ -72,4 +72,9 @@ a.customNav:hover {
     border-top-right-radius: .3rem;
     border-bottom-right-radius: .3rem;
     }
-    }
+}
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}

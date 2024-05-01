@@ -12,13 +12,12 @@ Hi {{ user.username }}!
     <button type="submit" class="btn btn-primary">Log Out</button>
   </form>
 </div>
-<div> hehe </div>
-<div>
-  <p class="dfd"></p>
-  <div class="abc"></div>
-</div>
 {% else %}
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">Log In</a>
 {% endif %}
+{% endblock %} 
+
+{% block slider %}
+{% include 'layout/slider.html' %}
 {% endblock %}

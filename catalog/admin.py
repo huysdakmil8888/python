@@ -30,7 +30,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
     def display_image(self, obj):
         return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
-        display_image.short_description = 'Image'
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
@@ -49,7 +48,6 @@ class ProductAdmin(admin.ModelAdmin):
 
     def display_image(self, obj):
         return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
-        display_image.short_description = 'Image'
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
@@ -62,7 +60,6 @@ class ImageAdmin(admin.ModelAdmin):
 
     def image(self, obj):
         return format_html('<img src="{}" width="50" height="50" />', obj.pic.url)
-        image.short_description = 'Image'
 
 admin_site.register(Category, CategoryAdmin)
 admin_site.register(Product, ProductAdmin)
