@@ -4,10 +4,65 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Sign Up</button>
+<h2 class="mt-4">Sign up</h2>
+<form id="app" @submit.prevent="submitForm">
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="username">Username:</label>
+      <input v-model="username" type="text" class="form-control" id="username" placeholder="Enter username" required>
+    </div>
+    <div class="form-group col-md-5 ml-4">
+      <label for="email">Email:</label>
+      <input v-model="email" type="email" class="form-control" id="email" placeholder="Enter email" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="pwd">Password:</label>
+      <input v-model="password" type="password" class="form-control" id="password" placeholder="Enter password" required>
+    </div>
+    <div class="form-group col-md-5 ml-4">
+      <label for="pwd-confirm">Confirm Password:</label>
+      <input v-model="passwordConfirm" type="password" class="form-control" id="password-confirm" placeholder="Confirm password" required>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      username: '',
+      password: '',
+      passwordConfirm: '',
+      email: ''
+    },
+    methods: {
+      submitForm() {
+        if(this.password !== this.passwordConfirm) {
+          showAlert('error', 'Oops...', 'Please enter the same password!');
+          return;
+        }
+        axios.post(baseUrl + '/accounts/api/signup/', {
+          username: this.username,
+          password: this.password,
+          email: this.email
+        })
+        .then(response => {
+          this.username = '';
+          this.password = '';
+          this.passwordConfirm = '';
+          this.email = '';
+          showAlert('success', 'Success!', 'You have registered successfully!');
+        })
+        .catch(error => {
+          if(error.response.data.username){
+            showAlert('error', 'Oops...', error.response.data.username[0]);
+          }
+        });
+      }
+    }
+  });
+</script>
 {% endblock %}

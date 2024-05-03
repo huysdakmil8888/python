@@ -13,8 +13,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from django.urls import path, include
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -42,6 +44,9 @@ INSTALLED_APPS = [
     'catalog',
     'ckeditor',
     'ckeditor_uploader',
+    'api',
+    'drf_yasg',
+    'corsheaders',
     # 'debug_toolbar'
 
 ]
@@ -57,6 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'app.my_middleware.SimpleMiddleware',  # new
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -86,7 +92,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'huy',
+        'NAME': 'huy2',
         'USER': 'huy',
         'PASSWORD': '',
         'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote
@@ -159,3 +165,20 @@ INTERNAL_IPS = [
 ]
 ALLOWED_HOSTS = ['*']
 CKEDITOR_UPLOAD_PATH = 'ckeditor/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        # Các lớp authentication khác nếu có
+    ),
+}
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=30),  # 1 hour
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),  # 1 day
+}
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    # 'http://127.0.0.1:8080',
+    'http://example.com',
+    # 'http://127.0.0.1:8000',  # Add this line
+]

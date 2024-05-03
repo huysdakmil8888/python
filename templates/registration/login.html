@@ -5,8 +5,7 @@
 
 {% block content %}
 <h2>Log In</h2>
-<section class="h-100 gradient-form" style="background-color: #eee;">
-  
+<section id="app" class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-xl-10">
@@ -14,18 +13,25 @@
           <div class="row g-0">
             <div class="col-lg-6">
               <div class="card-body p-md-5 mx-md-4">
-
                 <div class="text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                     style="width: 185px;" alt="logo">
                   <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                 </div>
 
-                <form method="post" action="{% url 'login' %}">
+                <form method="post" action="{% url 'login' %}" @submit.prevent="submitForm">
                   {% csrf_token %}
                   <p>Please login to your account</p>
 
-                  {{ form.as_p }}
+                  <div class="form-group col-md-12">
+                    <label for="username">Username:</label>
+                    <input v-model="username" type="text" class="form-control" id="username" placeholder="Enter username" required>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label for="password">Password:</label>
+                    <input v-model="password" type="password" class="form-control" id="password" placeholder="Enter password" required>
+                  </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
@@ -59,4 +65,31 @@
   </form>
 
 </section>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      username: '',
+      password: '',
+    },
+    methods: {
+      submitForm() {
+        axios.post(baseUrl + '/api/token', {
+          username: this.username,
+          password: this.password,
+        })
+        .then(response => {
+          this.username = '';
+          this.password = '';
+          localStorage.setItem('token', response.data.access);
+          showAlert('success', 'Success!', 'You login successfully!');
+        })
+        .catch(error => {
+          showAlert('error', 'Oops...', 'username or password is not correct');
+          console.log('error', error)
+        });
+      }
+    }
+  });
+</script>
 {% endblock %}

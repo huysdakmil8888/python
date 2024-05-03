@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="app">
+        <p>{{ data }}</p>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://unpkg.com/vue@2"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                data: null,
+            },
+            created() {
+                axios.get('http://127.0.0.1:8000/api/hello')
+                    .then(response => {
+                        this.data = response.data;
+                        console.log('this.data', this.data)
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            },
+        });
+    </script>
+</body>
+</html>

@@ -4,6 +4,8 @@ from django.views.generic import CreateView
 from accounts.models import User
 from .forms import CustomUserCreationForm
 from .signals import send_email
+from rest_framework import generics
+from .serializers import SignUpSerializer
 
 
 class SignUpView(CreateView):
@@ -16,8 +18,6 @@ class SignUpView(CreateView):
         send_email.send(sender=User, instance=self.object, created=True)
         return response
 
+class SignUpAPIView(generics.CreateAPIView):
+    serializer_class = SignUpSerializer
 
-class loginView(CreateView):
-    # form_class = CustomUserCreationForm
-    # success_url = reverse_lazy("login")
-    template_name = "registration/login.html"
