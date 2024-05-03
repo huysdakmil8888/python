@@ -12,21 +12,19 @@
       <th>Delete</th>
     </tr>
   </thead>
-  <tbody>
-    {% for category in categories %}
-    <tr>
-      <td>{{ category.name }}</td>
-      <td><img src="/uploads/{{ category.image }}" width="70"></td>
-      <td>{{category.parent.name}}</td>
-      <td><a class='btn btn-primary' href="{% url 'category_update' category.id %}">Edit</a></td>
+  <tbody id="hehe">
+    <tr v-for="category in list">
+      <td>[[ category.name ]]</td>
+      <td><img :src="[[category.image]]" width="70"></td>
+      <td>[[category.parent]]</td>
+      <td><a class='btn btn-primary' :href="'/categories/'+[[category.id]]+'/update'">Edit</a></td>
       <td>
-      <form method="post" action="{% url 'category_delete' category.id %}">
+      <form @submit.prevent="deleteCategory(category.id)">
         {% csrf_token %}
-        <input type="hidden" name="category_id" value="{{ category.id }}">
         <button class='btn btn-danger' type="submit">Delete</button>
+      </form>
       </td>
     </tr>
-    {% endfor %}
   </tbody>
 </table>
 <nav aria-label="Page navigation">
@@ -64,4 +62,41 @@
     {% endif %}
   </ul>
 </nav>
+<script>
+  new Vue({
+    el: '#app',
+    delimiters: ['[[', ']]'],  // change delimiters
+    data: {
+      list: [],
+      name:'huy'
+    },
+    created() {
+      axios.get(baseUrl + '/api/categories/')
+        .then(response => {
+          this.list = response.data
+        })
+        .catch(error => {
+          showAlert('error', 'Oops...', 'username or password is not correct');
+          console.log('error', error)
+        });
+    },
+    methods: {
+      deleteCategory(id) {
+        console.log('delete')
+        axios.delete(baseUrl + '/api/categories/' + id + '/delete/')
+          .then(response => {
+            this.list = this.list.filter(category => category.id !== id)
+            showAlert('success', 'Success!', 'You delete successfully!');
+          })
+          .catch(error => {
+            showAlert('error', 'Oops...', 'Something went wrong!');
+            console.log('error', error)
+          });
+        }
+    }
+    });
+</script>
+
+
+
 {% endblock %}

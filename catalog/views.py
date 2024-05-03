@@ -5,7 +5,31 @@ from .models import *
 from .forms import CategoryForm,ProductForm,ImageFormSet
 from django.core.paginator import Paginator
 from .signals import categories_retrieved
+from rest_framework import generics
+from .serializers import *
 
+class categoryList(generics.ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    # pagination_class = 'rest_framework.pagination.PageNumberPagination'
+class CategoryDelete(generics.DestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class CommentCreate(generics.CreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+class ProductCommentView(generics.ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    def get_queryset(self):
+        queryset = Comment.objects.all().order_by('-id')
+        product_id = self.kwargs.get('pk')
+        if product_id is not None:
+            queryset = queryset.filter(product_id=product_id)
+        return queryset
+    
 def category_list(request):
     categories = Category.objects.all()
     paginator = Paginator(categories, 10)

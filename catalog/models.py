@@ -69,3 +69,10 @@ class Product(itemBase):
 class Image(itemBase):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
     pic = models.FileField(upload_to='products/')
+class Comment(itemBase):
+    name = models.CharField(max_length=100)
+    comment = models.TextField(max_length=100)
+    product = models.ForeignKey(Product, related_name='comments', on_delete=models.CASCADE, null=True, blank=True)
+    def __str__(self):
+        return self.name
+    

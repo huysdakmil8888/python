@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Image</th>
       <th>Category</th>
+      <th>View</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
@@ -23,6 +24,7 @@
         {% if not forloop.last %}, {% endif %}
       {% endfor %}
     </td>
+      <td><a class='btn btn-info' href="{% url 'product_detail' product.id %}">View</a></td>
       <td><a class='btn btn-primary' href="{% url 'product_update' product.id %}">Edit</a></td>
       <td>
       <form method="post" action="{% url 'product_delete' product.id %}">
