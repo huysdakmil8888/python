@@ -83,7 +83,7 @@
     methods: {
       deleteCategory(id) {
         console.log('delete')
-        axios.delete(baseUrl + '/api/categories/' + id + '/delete/')
+        axios.delete(baseUrl + '/api/categories/' + id)
           .then(response => {
             this.list = this.list.filter(category => category.id !== id)
             showAlert('success', 'Success!', 'You delete successfully!');

@@ -5,30 +5,25 @@ from .models import *
 from .forms import CategoryForm,ProductForm,ImageFormSet
 from django.core.paginator import Paginator
 from .signals import categories_retrieved
-from rest_framework import generics
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 from .serializers import *
 
-class categoryList(generics.ListAPIView):
+class CategoryList(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     # pagination_class = 'rest_framework.pagination.PageNumberPagination'
-class CategoryDelete(generics.DestroyAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategorySerializer
 
-class CommentCreate(generics.CreateAPIView):
+class CommentList(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
-class ProductCommentView(generics.ListCreateAPIView):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-    def get_queryset(self):
-        queryset = Comment.objects.all().order_by('-id')
-        product_id = self.kwargs.get('pk')
-        if product_id is not None:
-            queryset = queryset.filter(product_id=product_id)
-        return queryset
+    @action(detail=True, methods=['get'])
+    def product_comments(self, request, pk=None):
+        comments = Comment.objects.filter(product_id=pk).order_by('-id')
+        serializer = self.get_serializer(comments, many=True)
+        return Response(serializer.data)
     
 def category_list(request):
     categories = Category.objects.all()

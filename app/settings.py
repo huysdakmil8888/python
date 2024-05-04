@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'api',
     'drf_yasg',
     'corsheaders',
+    'django_extensions',
     # 'debug_toolbar'
 
 ]
@@ -92,7 +93,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'huy2',
+        'NAME': 'huy',
         'USER': 'huy',
         'PASSWORD': '',
         'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote
