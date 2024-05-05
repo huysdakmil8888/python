@@ -12,6 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script>
     //general global variables, functions
     let baseUrl = 'http://127.0.0.1:8000';
@@ -31,7 +32,7 @@
 </header>
 <div class="container-fluid" id="app">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
       {% block content %} {% endblock %}
     </div>
   </div>

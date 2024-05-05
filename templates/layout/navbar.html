@@ -13,6 +13,8 @@
                 {% csrf_token %}
                 <button type="submit" class="btn btn-outline-danger pt-2 px-4 compact">Log Out</button>
             </form>
+            {% else %}
+              <a href="{% url 'login' %}" class="btn btn-outline-danger pt-2 px-4 compact">Log In</a>
             {% endif %}
           </div>
         </div>
@@ -38,3 +40,24 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const token = document.cookie.split('; ').find(row => row.startsWith('token')).split('=')[1];
+      const authSection = document.getElementById('authSection');
+
+      if (token) {
+        authSection.innerHTML = `
+          <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-danger pt-2 px-4 compact">Log Out</button>
+          </form>
+        `;
+      } else {
+        authSection.innerHTML = `
+          <a href="{% url 'login' %}" class="btn btn-outline-danger pt-2 px-4 compact">Log In</a>
+        `;
+      }
+    });
+  </script>
+
+  <div id="authSection"></div>

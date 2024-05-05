@@ -81,7 +81,7 @@
         .then(response => {
           this.username = '';
           this.password = '';
-          localStorage.setItem('token', response.data.access);
+          // cookies.set('token', response.data.access, { path: '/', expires: 1/60 }); // Set cookie to expire in 1 minute
           showAlert('success', 'Success!', 'You login successfully!');
         })
         .catch(error => {

@@ -6,7 +6,7 @@ from .forms import CustomUserCreationForm
 from .signals import send_email
 from rest_framework import generics
 from .serializers import SignUpSerializer
-
+from rest_framework.parsers import MultiPartParser
 
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm
@@ -20,4 +20,5 @@ class SignUpView(CreateView):
 
 class SignUpAPIView(generics.CreateAPIView):
     serializer_class = SignUpSerializer
+    parser_classes = [MultiPartParser]
 

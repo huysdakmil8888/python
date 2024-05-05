@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'huy',
+        'NAME': 'huy2',
         'USER': 'huy',
         'PASSWORD': '',
         'HOST': 'localhost',  # or the IP address of your PostgreSQL server if it's remote
@@ -172,6 +172,9 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         # Các lớp authentication khác nếu có
     ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    )
 }
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),  # 1 hour

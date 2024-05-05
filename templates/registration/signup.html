@@ -5,7 +5,7 @@
 
 {% block content %}
 <h2 class="mt-4">Sign up</h2>
-<form id="app" @submit.prevent="submitForm">
+<form id="app" @submit.prevent="submitForm" enctype="multipart/form-data">
   <div class="form-row">
     <div class="form-group col-md-5">
       <label for="username">Username:</label>
@@ -26,6 +26,12 @@
       <input v-model="passwordConfirm" type="password" class="form-control" id="password-confirm" placeholder="Confirm password" required>
     </div>
   </div>
+    <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="pwd">avatar:</label>
+      <input @change="onFileChange" type="file" class="form-control" id="avatar" placeholder="Enter avatar" required>
+    </div>
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
@@ -37,17 +43,27 @@
       password: '',
       passwordConfirm: '',
       email: '',
+      avatar: ''
     },
     methods: {
+      onFileChange(e) {
+        this.avatar = e.target.files[0];
+      },
       submitForm() {
         if(this.password !== this.passwordConfirm) {
           showAlert('error', 'Oops...', 'Please enter the same password!');
           return;
         }
-        axios.post(baseUrl + '/accounts/api/signup/', {
-          username: this.username,
-          password: this.password,
-          email: this.email
+        let formData = new FormData();
+        formData.append('username', this.username);
+        formData.append('password', this.password);
+        formData.append('email', this.email);
+        formData.append('image', this.avatar);
+
+        axios.post(baseUrl + '/accounts/api/signup/', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
         })
         .then(response => {
           this.username = '';

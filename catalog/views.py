@@ -9,17 +9,19 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from .serializers import *
+from rest_framework.permissions import IsAuthenticated
 
-class CategoryList(viewsets.ModelViewSet):
+class CategoryViewSet(viewsets.ModelViewSet):
+    # permission_classes = (IsAuthenticated,)
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     # pagination_class = 'rest_framework.pagination.PageNumberPagination'
 
-class CommentList(viewsets.ModelViewSet):
+class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
-    @action(detail=True, methods=['get'])
+    @action(detail=True, methods=['get']) # add custom route
     def product_comments(self, request, pk=None):
         comments = Comment.objects.filter(product_id=pk).order_by('-id')
         serializer = self.get_serializer(comments, many=True)
