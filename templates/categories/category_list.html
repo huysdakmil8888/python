@@ -14,7 +14,7 @@
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Image</th>
-        <th scope="col">Parent Category</th>
+        <th scope="col">Belongs to</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
       </tr>
@@ -23,7 +23,7 @@
       <tr v-for="category in list">
         <td>[[ category.name ]]</td>
         <td><img :src="[[category.image]]" class="img-thumbnail" width="70"></td>
-        <td>[[category.parent]]</td>
+        <td>[[category.parent_hierarchy]]</td>
         <td>
           <a class='btn btn-primary' :href="'/categories/'+[[category.id]]+'/update'">
             <i class="fas fa-edit"></i> Edit

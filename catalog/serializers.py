@@ -3,14 +3,21 @@ from rest_framework import serializers
 from .models import *
 
 class CategorySerializer(serializers.ModelSerializer):
-    parent = serializers.SerializerMethodField()
+    parent_hierarchy = serializers.SerializerMethodField()
     class Meta:
         model = Category
         fields = '__all__'  # or list the fields you want to include
     
-    def get_parent(self, obj):
-        return obj.parent.name if obj.parent else None
-    
+    # def get_parent(self, obj):
+    #     return obj.parent.name if obj.parent else None
+    def get_parent_hierarchy(self, obj):
+        hierarchy = []
+        def get_parents(category):
+            if category.parent:
+                hierarchy.append(category.parent.name)
+                get_parents(category.parent)
+        get_parents(obj)
+        return ' -> '.join(reversed(hierarchy))
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment

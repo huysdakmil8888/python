@@ -15,7 +15,6 @@ class CategoryForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
    
-
 class ProductForm(forms.ModelForm):
     # content = forms.CharField(widget=CKEditorUploadingWidget)
     class Meta:
