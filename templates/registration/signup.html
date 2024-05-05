@@ -5,7 +5,7 @@
 
 {% block content %}
 <h2 class="mt-4">Sign up</h2>
-<form id="app" @submit.prevent="submitForm" enctype="multipart/form-data">
+<form id="app" @submit.prevent="submitForm" enctype="multipart/form-data" class="mb-5">
   <div class="form-row">
     <div class="form-group col-md-5">
       <label for="username">Username:</label>
@@ -27,11 +27,13 @@
     </div>
   </div>
     <div class="form-row">
-    <div class="form-group col-md-5">
-      <label for="pwd">avatar:</label>
-      <input @change="onFileChange" type="file" class="form-control" id="avatar" placeholder="Enter avatar" required>
+      <div class="form-group col-md-5">
+        <label for="pwd">avatar:</label>
+        <input @change="onFileChange" type="file" class="form-control" id="avatar" placeholder="Enter avatar" required>
+        <img v-if="image" :src="image" alt="Image preview" class="img-thumbnail" width="150px"/>
+      </div>
     </div>
-  </div>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
@@ -43,11 +45,14 @@
       password: '',
       passwordConfirm: '',
       email: '',
-      avatar: ''
+      avatar: '',
+      image: null,  // New data property for the image preview
     },
     methods: {
       onFileChange(e) {
-        this.avatar = e.target.files[0];
+        const file = e.target.files[0];
+        this.avatar = file;
+        this.image = URL.createObjectURL(file);
       },
       submitForm() {
         if(this.password !== this.passwordConfirm) {
@@ -70,6 +75,7 @@
           this.password = '';
           this.passwordConfirm = '';
           this.email = '';
+          this.image = null;
           showAlert('success', 'Success!', 'You have registered successfully!');
         })
         .catch(error => {
