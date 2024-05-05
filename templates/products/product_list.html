@@ -1,9 +1,17 @@
 {% extends "base.html" %} 
 {% block title %}products{% endblock %}
 {%block content %}
-<h3>list products <a href="{% url 'product_create' %}" class="badge badge-success">Create new</a></h3>
-<table class="table table-striped">
-  <thead>
+<div class="container-fluid mt-4">
+<div class="row mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="mb-0">List products </h3>
+      <a href="{% url 'product_create' %}" class="btn btn-success">Create new</a>
+    </div>
+</div>
+<div class="row">
+
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Image</th>
@@ -36,6 +44,7 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
 <nav aria-label="Page navigation">
   <ul class="pagination">
     {% if products.has_previous %}
@@ -71,4 +80,5 @@
     {% endif %}
   </ul>
 </nav>
+</div>
 {% endblock %}
