@@ -32,13 +32,19 @@
         {% if not forloop.last %}, {% endif %}
       {% endfor %}
     </td>
-      <td><a class='btn btn-info' href="{% url 'product_detail' product.id %}">View</a></td>
-      <td><a class='btn btn-primary' href="{% url 'product_update' product.id %}">Edit</a></td>
+      <td><a class='btn btn-info' href="{% url 'product_detail' product.id %}">
+        <i class="fas fa-eye"></i>
+        View</a></td>
+      <td><a class='btn btn-primary' href="{% url 'product_update' product.id %}">
+        <i class="fas fa-edit"></i>
+        Edit</a></td>
       <td>
       <form method="post" action="{% url 'product_delete' product.id %}">
         {% csrf_token %}
         <input type="hidden" name="product_id" value="{{ product.id }}">
-        <button class='btn btn-danger' type="submit">Delete</button>
+        <button class='btn btn-danger' type="submit">
+          <i class="fas fa-trash-alt"></i>
+          Delete</button>
       </td>
     </tr>
     {% endfor %}

@@ -15,7 +15,9 @@
       <br /><br />
     <input type="file" name="{{ image_form.pic.name }}" multiple><br /><br />
     <a class="btn btn-success" href="{% url 'product_list' %}">Back</a> 
-    <button type="submit" class="btn btn-primary">{% if form.instance.pk %} Update {% else %}Add {% endif %} product</button>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-save"></i>
+      {% if form.instance.pk %} Update {% else %}Add {% endif %} product</button>
   </form>
 </div>
 {% endblock %}

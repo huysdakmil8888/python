@@ -19,7 +19,9 @@
       </div>
     {% endfor %}
     <a class="btn btn-success" href="{% url 'category_list' %}">Back</a>
-    <button type="submit" class="btn btn-primary">{%if form.instance.pk %} Update {% else %}Add {% endif %} Category</button>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-save"></i>
+      {%if form.instance.pk %} Update {% else %}Add {% endif %} Category</button>
   </form>
 </div>
 {% endblock %}
