@@ -5,12 +5,13 @@ from .models import *
 from .forms import CategoryForm,ProductForm,ImageFormSet
 from django.core.paginator import Paginator
 from .signals import categories_retrieved
-from rest_framework import viewsets
+from rest_framework import viewsets,generics
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from .serializers import *
 from rest_framework.permissions import IsAuthenticated
-
+from django.db.models import Count
+import logging
 class CategoryViewSet(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticated,)
     queryset = Category.objects.all()
@@ -26,7 +27,26 @@ class CommentViewSet(viewsets.ModelViewSet):
         comments = Comment.objects.filter(product_id=pk).order_by('-id')
         serializer = self.get_serializer(comments, many=True)
         return Response(serializer.data)
-    
+class ReportViewSet(generics.ListCreateAPIView):
+    # permission_classes = (IsAuthenticated,)
+    def list(self, request, *args, **kwargs):
+        queryset = Category.objects.all()
+        serializer =  CategorySerializer(queryset, many=True)
+
+        queryset2 = Product.objects.all().order_by('-view')[:5]
+        serializer2 = ProductSerializer(queryset2, many=True)
+
+        queryset3 = Product.objects.annotate(comments_count=Count('comments')).order_by('-comments_count')[:5]
+        serializer3 = ProductSerializer(queryset3, many=True)
+        return Response({
+            'categories': serializer.data,
+            'top_viewed_products': serializer2.data,
+            'top_commented_products': serializer3.data
+        })
+
+
+def report_list(request):
+    return render(request, 'reports/reports.html')    
 def category_list(request):
     categories = Category.objects.all()
     paginator = Paginator(categories, 10)
@@ -78,6 +98,8 @@ def product_list(request):
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
+    product.view += 1
+    product.save()
     return render(request, 'products/product_detail.html', {'product': product})
 
 def product_create(request):

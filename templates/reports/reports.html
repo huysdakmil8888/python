@@ -1,0 +1,84 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block title %}Report{% endblock %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="container">
+  <h4>Report</h4>
+  <div class="row">
+    <div class="col-md-6 chart-container">
+      <canvas id="myChart1"></canvas>
+    </div>
+    <div class="col-md-6 chart-container">
+      <canvas id="myChart2"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 chart-container">
+      <canvas id="myChart3"></canvas>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    new Vue({
+      el: '#app',
+      delimiters: ['[[', ']]'],  // change delimiters
+      countProductPerCategory: [],
+      countViewPerProduct: [],
+      countCommentPerProduct: [],
+      created() {
+        this.countProductPerCategory()
+      },
+      methods: {
+        countProductPerCategory() {
+          axios.get(baseUrl + '/api/reports/')
+            .then(response => {
+              this.countProductPerCategory = response.data.categories   
+              this.countViewPerProduct = response.data.top_viewed_products   
+              this.countCommentPerProduct = response.data.top_commented_products
+              this.createChart('Count product per category', this.countProductPerCategory, 'myChart1', 'product_count', '#FF5733', '#C70039')           
+              this.createChart('top viewed products', this.countViewPerProduct, 'myChart2', 'view', '#5DADE2', '#2874A6')           
+              this.createChart('top commented products', this.countCommentPerProduct, 'myChart3', 'comments_count', '#58D68D', '#239B56')           
+            })
+            .catch(error => {
+              showAlert('error', 'Oops...', 'Something went wrong!');
+              console.log('error', error)
+            });
+        },
+        
+        createChart(label, data, id, attribute, backgroundColor, borderColor){
+          var ctx = document.getElementById(id).getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: data.map(item => this.truncate(item.name, 30)),
+              datasets: [{
+                label,
+                data: data.map(item => item[attribute]),
+                backgroundColor,
+                borderColor,
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        },
+        truncate(str, n){
+          return (str.length > n) ? str.substr(0, str.lastIndexOf(' ', n)) + '...' : str;
+        }
+      }
+      });
+
+    
+
+  </script>
+{% endblock %}

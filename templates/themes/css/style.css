@@ -78,3 +78,16 @@ a.customNav:hover {
     height: 12px;
     border-radius: 50%;
 }
+
+.chart-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}

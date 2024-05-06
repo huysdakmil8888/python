@@ -32,6 +32,7 @@ class Product(itemBase):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='')
     categories = models.ManyToManyField(Category, related_name='products')
+    view = models.IntegerField(default=0)
     content = RichTextField(null=True, blank=True)
 
     def __str__(self):

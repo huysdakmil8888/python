@@ -4,6 +4,7 @@ from .models import *
 
 class CategorySerializer(serializers.ModelSerializer):
     parent_hierarchy = serializers.SerializerMethodField()
+    product_count = serializers.SerializerMethodField()
     class Meta:
         model = Category
         fields = '__all__'  # or list the fields you want to include
@@ -18,8 +19,18 @@ class CategorySerializer(serializers.ModelSerializer):
                 get_parents(category.parent)
         get_parents(obj)
         return ' -> '.join(reversed(hierarchy))
+    def get_product_count(self, obj):
+        return obj.products.count()
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'  # or list the fields you want to include
+
+class ProductSerializer(serializers.ModelSerializer):
+    comments_count = serializers.SerializerMethodField()
+    class Meta:
+        model = Product
+        fields = '__all__'  # or list the fields you want to include
+    def get_comments_count(self, obj):
+        return obj.comments.count()
     
