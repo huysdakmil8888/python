@@ -3,6 +3,14 @@
 {% block content %}
 <div class='col-md-6' style="margin-bottom: 100px;">
   <form method="post" enctype="multipart/form-data">
+  <a class="btn btn-success float-left" href="{% url 'product_list' %}">
+    <i class="fas fa-arrow-left"></i>
+    Back</a> 
+  <button type="submit" class="btn btn-primary float-right">
+    <i class="fas fa-save"></i>
+    {% if form.instance.pk %} Update {% else %}Add {% endif %} product
+  </button>
+  <div class="clearfix mb-4"></div>
     {% csrf_token %}
     {{ form.as_p }}
     {{ formset.management_form }}
@@ -14,10 +22,7 @@
       {% endfor %}
       <br /><br />
     <input type="file" name="{{ image_form.pic.name }}" multiple><br /><br />
-    <a class="btn btn-success" href="{% url 'product_list' %}">Back</a> 
-    <button type="submit" class="btn btn-primary">
-      <i class="fas fa-save"></i>
-      {% if form.instance.pk %} Update {% else %}Add {% endif %} product</button>
+
   </form>
 </div>
 {% endblock %}

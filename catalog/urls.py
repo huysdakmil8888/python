@@ -4,10 +4,10 @@ from django.urls import path
 from catalog.views import *
 
 urlpatterns = [
-    path('', category_list, name='category_list'),
+    path('categories', category_list, name='category_list'),
     path('categories/<int:pk>/', category_detail, name='category_detail'),
-    path('create/', category_create, name='category_create'),
-    path('<int:pk>/update/', category_update, name='category_update'),
+    path('categories/create/', category_create, name='category_create'),
+    path('categories/<int:pk>/update/', category_update, name='category_update'),
     path('categories/<int:pk>/delete/', category_delete, name='category_delete'),
 
     path('products', product_list, name='product_list'),

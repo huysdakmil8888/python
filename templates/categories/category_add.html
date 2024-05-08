@@ -3,6 +3,14 @@
 {%block content %}
 <div class="col-md-6">
   <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+    <a class="btn btn-success float-left" href="{% url 'category_list' %}">
+      <i class="fas fa-arrow-left"></i>
+      Back</a>
+    <button type="submit" class="btn btn-primary float-right">
+      <i class="fas fa-save"></i>
+      {%if form.instance.pk %} Update {% else %}Add {% endif %} Category
+    </button> 
+    <div class="clearfix mb-4"></div>
     {% csrf_token %}
     {% for field in form %}
       <div class="form-group">
@@ -18,10 +26,6 @@
         {% endfor %}
       </div>
     {% endfor %}
-    <a class="btn btn-success" href="{% url 'category_list' %}">Back</a>
-    <button type="submit" class="btn btn-primary">
-      <i class="fas fa-save"></i>
-      {%if form.instance.pk %} Update {% else %}Add {% endif %} Category</button>
   </form>
 </div>
 {% endblock %}

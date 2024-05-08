@@ -23,6 +23,8 @@
         text: text
       });
     }
+    var ava1 = "{% static 'images/ava1.png' %}";
+    var ava2 = "{% static 'images/ava2.png' %}";
   </script>
 </head>
 
@@ -36,13 +38,13 @@
       {% block content %} {% endblock %}
     </div>
   </div>
-  <div class="row mt-2">
+  <div class="row">
     <div class="col-md-12 p-0 m-0">
       {% block slider %} {% endblock %}
     </div>
   </div>
 </div>
-<footer class="fixed-bottom bg-dark text-white text-center p-2 mt-5">
+<footer class="fixed-bottom text-white text-center p-2 mt-5" style="background: linear-gradient(to right, #000000, #434343);">
   <p class="">&copy; 2024 Django</p>
 </footer>
 {% block scripts %} {% endblock %}

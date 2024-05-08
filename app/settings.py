@@ -151,9 +151,14 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"  # new
 
 # mailhog setting
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'
-EMAIL_PORT = 1025  # Example: 587 for Gmail
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'localhost'  # Example: 'smtp.gmail.com'
+# EMAIL_PORT = 1025  # Example: 587 for Gmail
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '4864d7e02fa639'
+EMAIL_HOST_PASSWORD = 'abeafd026dda82'
+EMAIL_PORT = '2525'
 
 
 MEDIA_URL = 'uploads/'  # show image
@@ -181,8 +186,8 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),  # 1 day
 }
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    # 'http://127.0.0.1:8080',
-    'http://example.com',
-    # 'http://127.0.0.1:8000',  # Add this line
+    'http://localhost:8000',
 ]
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'

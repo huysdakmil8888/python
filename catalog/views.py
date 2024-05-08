@@ -27,6 +27,16 @@ class CommentViewSet(viewsets.ModelViewSet):
         comments = Comment.objects.filter(product_id=pk).order_by('-id')
         serializer = self.get_serializer(comments, many=True)
         return Response(serializer.data)
+    
+    @action(detail=True, methods=['post'], serializer_class = ReplySerializer) # add custom route
+    def add_reply_comment(self, request, pk=None):
+        reply = Reply.objects.create(
+            name = request.data.get('name'),
+            content = request.data.get('content'),
+            comment_id = pk
+        )
+        serializer = ReplySerializer(reply)
+        return Response(serializer.data)
 class ReportViewSet(generics.ListCreateAPIView):
     # permission_classes = (IsAuthenticated,)
     def list(self, request, *args, **kwargs):
@@ -100,7 +110,7 @@ def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
     product.view += 1
     product.save()
-    return render(request, 'products/product_detail.html', {'product': product})
+    return render(request, 'products/product_view.html', {'product': product})
 
 def product_create(request):
     if request.method == 'POST':

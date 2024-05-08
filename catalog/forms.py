@@ -19,7 +19,7 @@ class ProductForm(forms.ModelForm):
     # content = forms.CharField(widget=CKEditorUploadingWidget)
     class Meta:
         model = Product
-        fields = '__all__'
+        exclude = ['view']
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

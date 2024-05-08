@@ -53,6 +53,7 @@ a.customNav:hover {
 }
 .gradient-custom-2 {
     /* fallback for old browsers */
+    padding : 13px 0px;
     background: #fccb90;
 
     /* Chrome 10-25, Safari 5.1-6 */
@@ -90,4 +91,27 @@ a.customNav:hover {
 canvas {
     width: 100%;
     height: auto;
+}
+.error {
+    border: 1px solid red;
+}
+/* css for list comment on product view page */
+#comment .card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+#comment .card-body {
+    padding: 15px;
+}
+
+#comment .card-title {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#comment .card-text {
+    color: #000;
+    font-size: 14px;
 }

@@ -7,18 +7,14 @@
         <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="4000">
-            <img class="d-block w-100" src="{% static 'images/1.jpg' %}" alt="First slide" style="max-height: 470px; object-fit: cover;">
-        </div>
-        <div class="carousel-item" data-interval="4000">
-            <img class="d-block w-100" src="{% static 'images/2.jpg' %}" alt="Second slide" style="max-height: 470px; object-fit: cover;">
-        </div>
-        <div class="carousel-item" data-interval="4000">
-            <img class="d-block w-100" src="{% static 'images/3.jpg' %}" alt="Third slide" style="max-height: 470px; object-fit: cover;">
-        </div>
-        <div class="carousel-item" data-interval="4000">
-            <img class="d-block w-100" src="{% static 'images/4.jpg' %}" alt="Third slide" style="max-height: 470px; object-fit: cover;">
-        </div>
+        {% for slider in sliders %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}" data-interval="3000">
+                <img class="d-block w-100" src="{{slider.image.url }}" alt="{{ slider.description }}" style="max-height: 670px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                    <p>{{ slider.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

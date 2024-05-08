@@ -30,10 +30,10 @@
       countViewPerProduct: [],
       countCommentPerProduct: [],
       created() {
-        this.countProductPerCategory()
+        this.getDataReport()
       },
       methods: {
-        countProductPerCategory() {
+        getDataReport() {
           axios.get(baseUrl + '/api/reports/')
             .then(response => {
               this.countProductPerCategory = response.data.categories   

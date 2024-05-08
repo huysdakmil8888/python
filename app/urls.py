@@ -8,6 +8,7 @@ from drf_yasg import openapi
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from app.views import HomeView
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -23,8 +24,8 @@ urlpatterns = [
     path("admin/", admin_site.urls),
     path("accounts/", include("accounts.urls")),  # signup
     path("accounts/", include("django.contrib.auth.urls")),  # login,logout
-    path("", TemplateView.as_view(template_name="home.html"), name="home"),  # new
-    path("categories/", include('catalog.urls')),
+    path("", HomeView.as_view(template_name="home.html"), name="home"),  # new
+    path("catalog/", include('catalog.urls')),
     path('api/', include('api.urls')),
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

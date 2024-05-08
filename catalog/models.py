@@ -19,8 +19,11 @@ class Category(itemBase):
     image = models.ImageField(upload_to='categories/%Y/%m', null=True, blank=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     def __str__(self):
-        return self.name
+        return self.name 
     
     def delete(self, *args, **kwargs):
         print('image',self.image.path)
@@ -77,3 +80,16 @@ class Comment(itemBase):
     def __str__(self):
         return self.name
     
+
+class Reply(itemBase):
+    name = models.CharField(max_length=100)
+    content = models.TextField(max_length=100)
+    comment = models.ForeignKey(Comment, related_name='replies', on_delete=models.CASCADE, null=True, blank=True)
+    def __str__(self):
+        return self.name
+    
+class Slider(itemBase):
+    image = models.ImageField(upload_to='slider/')
+    description = models.CharField(max_length=100)
+    def __str__(self):
+        return self.description
