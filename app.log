@@ -9726,3 +9726,82 @@ INFO:django.utils.autoreload:/Users/huy/code/project/app/settings.py changed, re
 INFO:django.utils.autoreload:Watching for file changes with StatReloader
 WARNING:django.request:Not Found: /ws/chat/python/
 INFO:root:Current server time: 2024-05-10 14:42:30.479061
+INFO:django.utils.autoreload:/Users/huy/code/project/app/settings.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /ws/chat/
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+WARNING:django.request:Not Found: /fake-url/css/style.css
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-10 15:54:16.736040
+INFO:django.utils.autoreload:/Users/huy/code/project/app/tasks.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:django.request:Bad Request: /accounts/api/signup/
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-10 16:08:27.817171
+WARNING:django.request:Not Found: /ws/chat/python
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-10 16:37:14.084650
+WARNING:django.request:Not Found: /templates/themes/css/style.css
+INFO:root:Current server time: 2024-05-10 16:37:14.919549
+WARNING:django.request:Not Found: /templates/themes/css/style.css
+INFO:root:Current server time: 2024-05-10 16:37:15.565372
+WARNING:django.request:Not Found: /templates/themes/css/style.css
+INFO:django.utils.autoreload:/Users/huy/code/project/app/settings.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-10 16:37:27.327786
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/
+WARNING:django.request:Not Found: /ws/chat/python/

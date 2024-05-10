@@ -16,7 +16,7 @@ logging.basicConfig(filename='app.log', level=logging.INFO)
 
 @shared_task
 def send_confirmation_email(user_id):
-    print('ok22')
+    print('chao cac sep')
     try:
         user = User.objects.get(pk=user_id)
     except User.DoesNotExist:

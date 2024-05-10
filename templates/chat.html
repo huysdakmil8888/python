@@ -1,48 +1,63 @@
-<!-- templates/home.html -->
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
-
 {% block content %}
-<div id="chat-messages" class="p-3 mb-2 bg-light text-dark">
-    <!-- Chat messages will be added here with JavaScript -->
-</div>
-
-<form id="message-form" class="form-inline">
-    <input id="message-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Type a message...">
-    <button type="submit" class="btn btn-primary mb-2">Send</button>
-</form>
-
-
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Chatbox</div>
+                    <div id="chat-log" class="card-body" style="height: 300px; overflow-y: scroll;"></div>
+                    <div class="card-footer">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Enter text here" id="input" type="text">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" id="submit" type="button">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ request.user.username|json_script:"user_username" }}
+    {{ chat_box_name|json_script:"room-name" }}
 {% endblock %}
+
 {% block scripts %}
 <script>
-var socket = new WebSocket('ws://127.0.0.1:8000/ws/chat/python/');
+    const user_username = JSON.parse(document.getElementById('user_username').textContent);
+    const boxName = 'python';
+    const chatSocket = new WebSocket(
+        'ws://' +
+        window.location.host +
+        '/ws/chat/' +
+        boxName +
+        '/'
+    );
 
-// Connection opened
-socket.addEventListener('open', function (event) {
-    socket.send(JSON.stringify({
-        'message': 'Hello Server!'
-    }));
-});
+    document.querySelector('#submit').onclick = function (e) {
+        const messageInputDom = document.querySelector('#input');
+        const message = messageInputDom.value;
+        chatSocket.send(JSON.stringify({
+            'message': message,
+            'username': user_username,
+        }));
+        messageInputDom.value = '';
+    };
 
-// Listen for messages
-socket.addEventListener('message', function (event) {
-    var data = JSON.parse(event.data);
-    var messageElement = document.createElement('p');
-    messageElement.textContent = data.message;
-    document.querySelector('#chat-messages').appendChild(messageElement);
-});
+    chatSocket.onmessage = function (e) {
+        const data = JSON.parse(e.data);
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('p-2', 'border-bottom');
 
-// Send a message when the form is submitted
-document.querySelector('#message-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    var messageInput = document.querySelector('#message-input');
-    socket.send(JSON.stringify({
-        'message': messageInput.value
-    }));
-    messageInput.value = '';
-});
+        const usernameElement = document.createElement('strong');
+        usernameElement.textContent = data.username;
+        usernameElement.style.color = 'blue';
+
+        messageElement.appendChild(usernameElement);
+        messageElement.appendChild(document.createTextNode(': ' + data.message));
+
+        document.querySelector('#chat-log').appendChild(messageElement);
+    }
 </script>
-
 {% endblock %}
