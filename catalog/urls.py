@@ -17,5 +17,6 @@ urlpatterns = [
     path('products/<int:pk>/delete/', product_delete, name='product_delete'),
 
     path('reports/', report_list, name='reports'),
+    path('chat/', chat_list, name='chat'),
 
 ]

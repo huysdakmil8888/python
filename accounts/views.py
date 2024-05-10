@@ -21,6 +21,7 @@ class SignUpAPIView(generics.CreateAPIView):
     serializer_class = SignUpSerializer
     parser_classes = [MultiPartParser]
     def perform_create(self, serializer):
+        print('perfom create')
         user = serializer.save()
         user_signed_up.send(sender=self.__class__, user_id=user.id)
 

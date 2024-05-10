@@ -22,9 +22,9 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path("accounts/", include("accounts.urls")),  # signup
     path('accounts/', include('allauth.urls')), # login google
    #  path('accounts/', include('allauth.socialaccount.urls')),
-    path("accounts/", include("accounts.urls")),  # signup
     path("accounts/", include("django.contrib.auth.urls")),  # login,logout
     path("admin/", admin.site.urls),
     path("", HomeView.as_view(template_name="home.html"), name="home"),  # new

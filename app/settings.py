@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'django_extensions',
+    'channels',
     # 'debug_toolbar'
 
 ]
@@ -235,8 +236,19 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         'AUTH_PARAMS': {
             'auth_type': 'reauthenticate',
-            'redirect_uri': 'https://6001-14-161-35-153.ngrok-free.app/accounts/facebook/login/callback/',  # Use HTTPS here
+            # 'redirect_uri': 'https://6001-14-161-35-153.ngrok-free.app/accounts/facebook/login/callback/',  # Use HTTPS here
         },
     },
 }
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
+
+ASGI_APPLICATION = 'project.routing.application'

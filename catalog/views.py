@@ -57,6 +57,10 @@ class ReportViewSet(generics.ListCreateAPIView):
 
 def report_list(request):
     return render(request, 'reports/reports.html')    
+
+def chat_list(request):
+    return render(request, 'chat.html')   
+
 def category_list(request):
     categories = Category.objects.all()
     paginator = Paginator(categories, 10)
@@ -147,3 +151,9 @@ def product_delete(request, pk):
         product.delete()
         return redirect('product_list')
     return render(request, 'products/product_confirm_delete.html', {'product': product})
+
+
+class ChatViewSet(generics.ListCreateAPIView):
+    # permission_classes = (IsAuthenticated,)
+    def list(self, request, *args, **kwargs):
+        return render(request, 'chat.html')

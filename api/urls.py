@@ -12,5 +12,6 @@ router.register('comments', CommentViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('reports/', ReportViewSet.as_view()),
+    # path('chat/', ChatViewSet.as_view()),
     # path('hello/', BookListView.as_view(), name='hello'),
 ]
