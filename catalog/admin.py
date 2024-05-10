@@ -2,19 +2,20 @@ from django.contrib import admin
 from django.utils.html import format_html
 from .models import Category, Product, Image, Slider
 from django.urls import path
-class CatalogAdminSite(admin.AdminSite):
-    site_header = 'Administration System'
-    site_title = 'Catalog Admin'
-    index_title = 'Catalog Admin Home'
-    index_template = 'admin/index.html'
-    def get_urls(self):
-        urls = super().get_urls()
-        custom_urls = [
-            # add your custom URLs here
-        ]
-        return custom_urls + urls
+from allauth.socialaccount.models import SocialApp
+# class CatalogAdminSite(admin.AdminSite):
+#     site_header = 'Administration System'
+#     site_title = 'Catalog Admin'
+#     index_title = 'Catalog Admin Home'
+#     index_template = 'admin/index.html'
+#     def get_urls(self):
+#         urls = super().get_urls()
+#         custom_urls = [
+#             # add your custom URLs here
+#         ]
+#         return custom_urls + urls
 
-admin_site = CatalogAdminSite()
+# admin_site = CatalogAdminSite()
 
 class CategoryInline(admin.TabularInline):  # or admin.StackedInline
     model = Product.categories.through
@@ -71,7 +72,10 @@ class ImageAdmin(admin.ModelAdmin):
     def image(self, obj):
         return format_html('<img src="{}" width="50" height="50" />', obj.pic.url)
 
-admin_site.register(Category, CategoryAdmin)
-admin_site.register(Product, ProductAdmin)
-admin_site.register(Image, ImageAdmin)
-admin_site.register(Slider)
+# Customizations go here
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Image, ImageAdmin)
+admin.site.register(Slider)
+# admin.site.register(SocialApp)
+# admin.site.register(SocialApp)

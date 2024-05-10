@@ -115,3 +115,6 @@ canvas {
     color: #000;
     font-size: 14px;
 }
+#id_password_helptext{
+    display: none;
+}

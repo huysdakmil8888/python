@@ -1,27 +1,5 @@
-<div class="bg-light">
-    <div class="container-fluid">
-      <div class='d-flex justify-content-between align-items-center' style="height:85px">
-        <div class="p-2"><a class="navbar-brand" href="#"><img src="{{user.get_image_url}}" height="90" alt=""></a></div>
-        <div class="p-2 text-end">
-          <div class="d-inline-block mx-3 compact align-middle">
-            <span class="fs-3 fontStyle1">Call Us Today</span><br />
-            <span class="fs-5 fontStyle2">0898687048</span>
-          </div>
-          <div class="d-inline-block mx-3 d-none d-lg-inline-block d-md-inline-block d-sm-inline-block">
-            {% if user.is_authenticated %}
-             <form action="{% url 'logout' %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-outline-danger pt-2 px-4 compact">Log Out</button>
-            </form>
-            {% else %}
-              <a href="{% url 'login' %}" class="btn btn-outline-danger pt-2 px-4 compact">Log In</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-  <div class="bg-danger fontStyle2">
+
+  <div class="bg-danger fontStyle2 mt-2">
     <button type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" class="btn btn-danger w-100 d-lg-none d-md-none d-sm-block d-xs-block rounded-0 p-2"><i class="fas fa-bars me-2"></i> Menu</button>
     <div class="collapse navbar-collapse px-2" id="bottomNavbar">
       <div class="container-fluid">
@@ -34,8 +12,20 @@
             <a href="{% url 'reports' %}" class="{%if 'reports' in request.path %} active {%endif%} d-inline-block customNav">Report</a>
             <a href="/admin" class="d-inline-block customNav">Admin</a>
           </div>
-          <div class="m-3">
+          <div class="">
             <i class="fas fa-search text-white fs-6"></i>
+            {% if user.is_authenticated %}
+            <a href="#" class="customNav">Welcome, {{ user.first_name }}  {{user.last_name}}!</a>
+                {% if user.socialaccount_set.all.0.extra_data.picture %}
+                <a  href="#"> <img src="{{ user.socialaccount_set.all.0.extra_data.picture }}" alt="{{ user.username }}" class="rounded-circle img-responsive" width="50" height="50">
+                {% endif %}
+                <form action="{% url 'logout' %}" method="post" class="float-right">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-danger mt-2 ml-1 compact">Log Out</button>
+                </form>
+            {%else%}
+            <a href="{% url 'login' %}" class="btn btn-danger mt-2 ml-1 compact">Log In</a>
+            {%endif%}
           </div>
         </div>
       </div>

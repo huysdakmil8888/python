@@ -3,12 +3,13 @@ from django.urls import path, include, re_path  # new
 from django.views.generic.base import TemplateView  # new
 from django.conf import settings
 from django.conf.urls.static import static
-from catalog.admin import admin_site
+# from catalog.admin import admin_site
 from drf_yasg import openapi
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from app.views import HomeView
+from django.contrib import admin 
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -21,9 +22,11 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path("admin/", admin_site.urls),
+    path('accounts/', include('allauth.urls')), # login google
+   #  path('accounts/', include('allauth.socialaccount.urls')),
     path("accounts/", include("accounts.urls")),  # signup
     path("accounts/", include("django.contrib.auth.urls")),  # login,logout
+    path("admin/", admin.site.urls),
     path("", HomeView.as_view(template_name="home.html"), name="home"),  # new
     path("catalog/", include('catalog.urls')),
     path('api/', include('api.urls')),

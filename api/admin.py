@@ -1,5 +1,5 @@
 from django.contrib import admin
-from catalog.admin import admin_site
+# from catalog.admin import admin_site
 from .models import Book, Author
 
 
