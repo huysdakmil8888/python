@@ -17,10 +17,10 @@
             <i class="fas fa-search text-white fs-6"></i>
             {% if user.is_authenticated %}
             <a href="#" class="customNav">Welcome, {{ user.first_name }}  {{user.last_name}}!</a>
-                {% if user.socialaccount_set.all.0.extra_data.picture %}
-                <a  href="#"> 
-                  <img src="{{ user.socialaccount_set.all.0.extra_data.picture }}" alt="{{ user.username }}" class="rounded-circle img-responsive" width="50" height="50">
-                  </a>
+                {% if user.socialaccount_set.all.0.provider == 'google' %}
+                <a  href="#"><img src="{{ user.socialaccount_set.all.0.extra_data.picture }}" alt="{{ user.username }}" class="rounded-circle img-responsive" width="50" height="50"></a>
+                {% elif user.socialaccount_set.all.0.provider == 'facebook' %}
+                <a  href="#"><img src="{{ user.socialaccount_set.all.0.extra_data.picture.data.url }}" alt="{{ user.username }}" class="rounded-circle img-responsive" width="50" height="50"></a>
                 {% endif %}
                 <form action="{% url 'logout' %}" method="post" class="float-right">
                   {% csrf_token %}

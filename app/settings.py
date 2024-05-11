@@ -16,6 +16,7 @@ from django.urls import path, include
 from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+SITE = 'https://5258-115-74-83-222.ngrok-free.app'
 
 
 
@@ -70,7 +71,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'app.my_middleware.SimpleMiddleware',  # new
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'allauth.account.middleware.AccountMiddleware',  # middleware for google login
 ]
 
@@ -201,6 +202,11 @@ SIMPLE_JWT = {
 }
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
+    'https://9d78-115-74-83-222.ngrok-free.app'
+]
+CSRF_TRUSTED_ORIGINS = [
+    SITE,
+    # Add any other origins you want to trust
 ]
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
@@ -220,6 +226,14 @@ SOCIALACCOUNT_PROVIDERS = {
         'OAUTH_PKCE_ENABLED': True,
     },
     'facebook': {
+        'METHOD': 'oauth2',
+        'EXCHANGE_TOKEN': True,
+        'ADAPTER': 'app.custom.CustomFacebookOAuth2Adapter',
+        # 'APP': {
+        #     'client_id': '692006079650183',
+        #     'secret': 'ab20a0a8e1d4720fb39c4a852fe5ad94',
+        #     'key': ''
+        # },
         'FIELDS': [
             'id',
             'email',
@@ -234,13 +248,13 @@ SOCIALACCOUNT_PROVIDERS = {
             'updated_time',
             'picture.width(800).height(800)',  # Request larger picture
         ],
-        'AUTH_PARAMS': {
-            'auth_type': 'reauthenticate',
-            # 'redirect_uri': 'https://6001-14-161-35-153.ngrok-free.app/accounts/facebook/login/callback/',  # Use HTTPS here
-        },
+'AUTH_PARAMS': {
+    'auth_type': 'reauthenticate',
+    # 'redirect_uri': SITE+ '/accounts/facebook/login/callback/',  # Use HTTPS here
+},
     },
 }
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http'
+
 
 CHANNEL_LAYERS = {
     'default': {
@@ -252,3 +266,7 @@ CHANNEL_LAYERS = {
 }
 
 ASGI_APPLICATION = 'app.asgi.application'
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# DEFAULT_HTTP_PROTOCOL = "https"
+# SECURE_PROXY_SSL_HEADER = 'HTTP_X_FORWARDED_PROTO', 'https'

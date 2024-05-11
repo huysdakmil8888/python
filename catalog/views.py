@@ -12,6 +12,11 @@ from .serializers import *
 from rest_framework.permissions import IsAuthenticated
 from django.db.models import Count
 import logging
+
+
+
+
+
 class CategoryViewSet(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticated,)
     queryset = Category.objects.all()
@@ -53,7 +58,6 @@ class ReportViewSet(generics.ListCreateAPIView):
             'top_viewed_products': serializer2.data,
             'top_commented_products': serializer3.data
         })
-
 
 def report_list(request):
     return render(request, 'reports/reports.html')    

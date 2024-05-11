@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class User(AbstractUser):
     # email = models.EmailField()
-    # password = models.CharField(max_length=100, null=True, blank=True)
+    password = models.CharField(max_length=100, null=True, blank=True)
     username = models.CharField(max_length=100, null=True, blank=True, unique=True)
     image = models.ImageField(upload_to='users/%Y/%m', null=True, blank=True)
     # first_name = models.CharField(max_length=100)
