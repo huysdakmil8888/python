@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+            margin-left: 15px;
+            background-color: yellowgreen;
+            /* align-items: stretch; */
+
+
+            
+        }
+        li{
+            padding: 5px 10px;
+            background-color: red;
+            line-height: 50px;
+        }
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        li:hover{
+            background-color: blue;
+            cursor: pointer;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: blanchedalmond;
+            min-height: 50px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width: 900px) {
+            nav,ul{
+                flex-direction: column;
+                margin-left: 0;
+            }
+            a.menu{
+                display: block !important;
+            }
+            ul{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="" style="display: none;" class="menu">show menu</a>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">News</a></li>
+        </ul>
+        <input type="text" placeholder="search...">
+    </nav>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis quam blanditiis ipsa tempore doloremque modi praesentium quia eum hic ex voluptates voluptatem voluptatum laboriosam saepe fugit harum, atque rem quod minus est. Rerum perferendis, consequuntur non, architecto distinctio beatae quisquam voluptas enim, dolores fuga odio soluta? Rerum consectetur perspiciatis amet corporis voluptatibus vero ipsum consequuntur expedita non quas itaque cum laboriosam quis, eaque magnam quidem facere. Reiciendis nihil qui doloribus quisquam officia et vel fugit iste tenetur vitae quam, recusandae debitis quas dicta officiis nulla excepturi. Eum, repudiandae asperiores? Asperiores excepturi odio quisquam nesciunt dolorum ut voluptatum, recusandae quidem.
+    </div>
+<script>
+    document.querySelector(".menu").addEventListener("click", function(e) {
+        e.preventDefault();
+        var ul = document.querySelector("ul");
+        if (ul.style.display === "block") {
+            ul.style.display = "none";
+        } else {
+            ul.style.display = "block";
+        }
+    });
+</script>
+</body>
+</html>

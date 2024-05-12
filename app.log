@@ -1873,3 +1873,65 @@ INFO:app.my_middleware:Facebook callback received with code: AQBmH0L3Y3qzFPTG8Dk
 INFO:root:Current server time: 2024-05-11 15:53:27.478159
 INFO:root:Current server time: 2024-05-11 15:53:34.900235
 INFO:root:Current server time: 2024-05-11 15:53:41.664224
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-11 16:11:50.381516
+INFO:root:Current server time: 2024-05-11 16:11:54.836064
+INFO:root:Current server time: 2024-05-11 16:11:56.436856
+WARNING:django.request:Not Found: /favicon.ico
+INFO:app.my_middleware:Facebook callback received with code: AQAMZQi6nWC8pEl_BuLDZC9hUdKmxALeXWQsaEHHbTHESsxRUWB0i1SE5PHw92cp2tUgFrhNz87NSIQmfl4s9I4jwVziy1qGInTUNsuJ6sGcuOlXgbh3dQ85seSKTAD88DOGgacqIpcXpCqPL236qnWDLH4rSEhylevQByTE52AtrX7RRfMFUX-ab1-MUrFvPfkg3UIZKSLGMP-X7p96F29R6s0d6eJpN4cqpQOlsU0PH5c0pA2nL0rDU7Qu14cyxsfnnKhL7KuoAnv3U8g62Wh7T29-CKJAHRUHjSowloZfl86wbLkqFc69BVMxSKUjlsSIUXXVubSDg2xCGtlD_4TXmBCo_xBbyhPTq-aw6iojjIOSdGHvJQ_LYHMOWDoVmauEWDmjd3UJyN6FOwTjMueFwDC0p4ZWyf9lIVvqDtlBvQ
+INFO:root:Current server time: 2024-05-11 16:12:19.332860
+INFO:root:Current server time: 2024-05-11 16:12:25.769650
+INFO:root:Current server time: 2024-05-11 16:12:32.675759
+INFO:root:Current server time: 2024-05-11 17:36:03.319824
+INFO:app.my_middleware:Facebook callback received with code: AQAWEVLGC2xIrA4rkICU2O9_JezbIuix2Ol2bmI0migRee1glokIMSf0Uj0A8_kIQctT6fRLJDD6ldopP0pm3Tk80fmT36ClfQORQ2BBsdraBinoxbyRbT_Z8X2k8j6TCWVikhhdaxuwjzq6hCRbDlYrjZimZKp-y3n0Thw4UxY9BMe96jq7O2J2RR8qnW1swfmHETR7Ty5LnMMz0kIJ9HSqtuq48aj42N9GlW2Vh9hx_jR0UXZ1yzhpR5nNrSMW3H1hvIOjuTEn9Xp9o5ic5ge1e3uy3SO4ashx8pFWcTlREXs9sEcMBS-TZIExlWLqALULz6-5hkwaHjxSdbmG_QywbCVunxE7yH9MPXNCiS_pJU77_FxVi6GfECUuh27EYkcDdPrJwE_XNTYV767kXiJqfU5tNnGqW6u5zbNoKy2pkw
+INFO:root:Current server time: 2024-05-11 17:36:20.315048
+INFO:root:Current server time: 2024-05-11 17:36:26.873947
+WARNING:django.request:Not Found: /categories/
+WARNING:django.request:Not Found: /categories/
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-11 18:05:29.495659
+INFO:root:Current server time: 2024-05-11 18:05:39.132907
+INFO:root:Current server time: 2024-05-11 18:05:44.201447
+INFO:root:Current server time: 2024-05-11 18:05:45.417473
+INFO:root:Current server time: 2024-05-11 18:05:48.165074
+INFO:root:Current server time: 2024-05-11 18:05:54.063297
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-11 18:08:10.314565
+INFO:app.my_middleware:Facebook callback received with code: AQDMSFFALACuzsIaWWDR4IXByDuYCtW44kg2CCnpz0lQDevMr23gdjgYEUhF21DY96FM8qzMyRLSyf8QsUaa5kt8gu_L6JUAKP_hSUJPMP6dm6vvM9r22nRYKboaAuwQ1Azwuiw6P6H4XVvDAkdXQyGvGMjwtYlRqBA1CmOZt7dZmHjR2RhulsUDAtv-FG4hEOoAZmOXR_OQ3ebwijV3VG1f7qQYzI3PebjBmJUt0_K-EkWzc5VKDCIhxbRISwvEunHg4SSQmgrmob9Vh1mPU4la7lwxUsghOs7Cl4-S1LuX9GRAU_rdjxu7HkIawmc4hKvsYhOAPdQ7pCg2gHcadY1LSLfErgqUYjUGU1T3PPa-O6eNpfl1eCWQS7q_TjEu3VwkH15m9LpqmqkmC73kh5_rLquQsFY3vdYslGIqvY4_aw
+INFO:root:Current server time: 2024-05-11 18:08:19.889384
+INFO:root:Current server time: 2024-05-11 18:08:46.010485
+INFO:root:Current server time: 2024-05-11 18:08:58.475131
+INFO:root:Current server time: 2024-05-11 19:05:07.708711
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-11 20:40:23.533145
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-11 20:41:03.362083
+INFO:root:Current server time: 2024-05-11 20:41:09.167912
+INFO:root:Current server time: 2024-05-11 20:41:09.744424
+INFO:root:Current server time: 2024-05-11 20:41:10.024261
+INFO:app.my_middleware:Facebook callback received with code: AQBgFowbVAoeU6k2DcTMzGhFt9dwFlKCSbA0oHpC_dlRUyjbKXvfKE_YEOGOUXYxyyffPqizV3kQIXxNdgUQHVi8uqdF_9yrL2VnufWyWUUfQIYpDWOzCINdG6hsghuEIkHm6F6p4p9xu1SfPOjIysl8Oq4DHcGkQXSNvMHAz3Zi5fK0WPjxfc69OodzWPu88CEVI1zAFnWELNt_ytUvveHH98WUItdPE9BCcFDSOH5tBiM9t2WeEI8BA1zvRf7OnWgc7MRmdrQcz7fUFUSIO0ZmSbQoNKlwJboHD_l1bhV4t1cMAm_5Suj6AWtzdp956z3wNUVhEUkiCjRQhswnFqmGHMy_dDh-HCDWv0lE96KAogA3NaPxHmKXbnNMkjXZtxH9PwHC1mqNa_yPKbvvb5ty8icuUh-4iw66iH9CzIsk1Q
+INFO:root:Current server time: 2024-05-11 20:41:23.376706
+INFO:root:Current server time: 2024-05-11 20:41:36.408124
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-12 10:12:48.769168
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-12 10:28:06.947559
+INFO:root:Current server time: 2024-05-12 10:28:08.804117
+INFO:root:Current server time: 2024-05-12 10:28:12.706990
+INFO:root:Current server time: 2024-05-12 10:28:14.812345
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-12 10:28:24.946040
+INFO:root:Current server time: 2024-05-12 10:28:29.750210
+WARNING:django.request:Not Found: /favicon.ico
+INFO:app.my_middleware:Facebook callback received with code: AQCX1a2yZqm1kom3tK6wigAtQVwHAH9iJHNltgY4-DleAcMUjC6ohdhpQONkgjdND68tOpbKpPpspa7zenEDNWBYjY47i353zRbzcI4fm5KP7EIvhQ9UyqQC0Q-eyVlcKrY0fgFdw-85KVp-GFdCTPUwmiZ0teYopGo2mRf1wb1sYfvczSj_1Ooinx6MNhtztKq0p7F9bauIeeXM6xOshJ1Qv48i92pJssQUM1lbi7aB83Cqnvs2SSaEyPkbIvIee02mRNpMTRLiJJxU1gxBgqA_6LiRkCNXxbvyz9MAHTk8C4H8bY60gjeCDahRhOOPXfIFhgqD8yfaCfaGVlb0iZpYJiLbPqLS_FKyrnKWDH9FDsEVfaGGtLoWLMynF808IOQ5EGSW3uX_bf6qsTSp0ORvWE_m2rYbdY1vo7OiR3h6jg
+INFO:root:Current server time: 2024-05-12 10:30:34.004397
+INFO:root:Current server time: 2024-05-12 10:30:35.721398
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:django.request:Not Found: /categories/
+WARNING:django.request:Not Found: /categories/
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:Current server time: 2024-05-12 12:43:33.364267
+INFO:root:Current server time: 2024-05-12 13:25:03.915085
+INFO:root:Current server time: 2024-05-12 13:25:05.713097
+INFO:root:Current server time: 2024-05-12 13:26:52.323103
+INFO:root:Current server time: 2024-05-12 13:26:53.998227

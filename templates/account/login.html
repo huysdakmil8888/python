@@ -15,7 +15,7 @@
         <div class="card rounded-3 text-black">
           <div class="row g-0">
             <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
+              <div class="card-body mx-md-4">
                 <div class="text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                     style="width: 185px;" alt="logo">
@@ -26,15 +26,19 @@
                   {% csrf_token %}
                   <p>Please login to your account</p>
                   {{ form }}
-                  <div class="text-center pt-1 mb-5 pb-1">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                  <div class="text-center pt-1 mb-3 pb-1 d-flex">
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1 flex-grow-1" type="submit" style="flex: 1;">Log
                       in</button>
-                    <a class="text-muted" href="#!">Forgot password?</a>
-                    <button id="facebookSignInButton" class="mb-3" onclick="location.href='{% provider_login_url 'facebook' %}'" style="
+                    <a  class="text-muted flex-grow-1" href="#!" style="flex:1 ;">Forgot password?</a>
+
+                    
+                  </div>
+                  <div class="text-center mb-5 pb-1 d-flex justify-content-around">
+                    <button id="facebookSignInButton" class="mb-3 d-flex" onclick="location.href='{% provider_login_url 'facebook' %}'" style="
                         display: inline-block;
                         background: #3b5998;
                         color: white;
-                        width: 191px;
+                        width: 150px;
                         height: 46px;
                         border-radius: 2px;
                         box-shadow: 0px 2px 4px 1px rgba(0,0,0,.25);
@@ -51,15 +55,14 @@
                             margin-top: 7px;
                             /* margin-top: 11px; */
                         ">
-                        <span style="display: inline-block; line-height: 46px; vertical-align: top;    margin-top: -28px;
-                        margin-left: 30px;">Sign in with Facebook</span>
+                        <span style="display: inline-block; line-height: 19px; vertical-align: top;">Sign in with Facebook</span>
                     </button>
                     {% csrf_token %}
-                    <button id="googleSignInButton" onclick="location.href='{% provider_login_url 'google' %}'" style="
+                    <button class="d-flex" id="googleSignInButton" onclick="location.href='{% provider_login_url 'google' %}'" style="
                         display: inline-block;
                         background: white;
                         color: #757575;
-                        width: 191px;
+                        width: 150px;
                         height: 46px;
                         border-radius: 2px;
                         box-shadow: 0px 2px 4px 1px rgba(0,0,0,.25);
@@ -76,9 +79,8 @@
                       margin-top: 11px;
 
                     ">
-                        <span style="display: inline-block; line-height: 46px; vertical-align: top;">Sign in with Google</span>
+                        <span style="display: inline-block; line-height: 20px; vertical-align: top;">Sign in with Google</span>
                     </button>
-                    
                   </div>
 
 
