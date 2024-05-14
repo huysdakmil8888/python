@@ -1935,3 +1935,1233 @@ INFO:root:Current server time: 2024-05-12 13:25:03.915085
 INFO:root:Current server time: 2024-05-12 13:25:05.713097
 INFO:root:Current server time: 2024-05-12 13:26:52.323103
 INFO:root:Current server time: 2024-05-12 13:26:53.998227
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:Current server time: 2024-05-14 14:07:44.004348
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+                                                                  ^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /admin/catalog/category/
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 289, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 322, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: Category has no field named 'display_image'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 345, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 312, in __init__
+    super().__init__(*items)
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/templatetags/admin_list.py", line 217, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/contrib/admin/utils.py", line 298, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/Users/huy/code/project/catalog/admin.py", line 41, in display_image
+    try:
+         
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 66, in url
+    self._require_file()
+  File "/Users/huy/code/project/.venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 41, in _require_file
+    raise ValueError(
+ValueError: The 'image' attribute has no file associated with it.
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/huy/code/project/catalog/admin.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader

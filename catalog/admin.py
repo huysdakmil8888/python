@@ -1,3 +1,4 @@
+
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import Category, Product, Image, Slider
@@ -38,7 +39,10 @@ class CategoryAdmin(admin.ModelAdmin):
     raw_id_fields = ('parent',)  # fields to display as raw id fields
 
     def display_image(self, obj):
-        return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+        try:
+            return format_html('<img src="{}" width="50" height="50" />', obj.image.url)
+        except:
+             return format_html('<img src="{}" width="50" height="50" />', 'https://media.istockphoto.com/id/1396814518/vi/vec-to/h%C3%ACnh-%E1%BA%A3nh-s%E1%BA%AFp-t%E1%BB%9Bi-kh%C3%B4ng-c%C3%B3-%E1%BA%A3nh-kh%C3%B4ng-c%C3%B3-h%C3%ACnh-%E1%BA%A3nh-thu-nh%E1%BB%8F-c%C3%B3-s%E1%BA%B5n-h%C3%ACnh-minh-h%E1%BB%8Da-vector.jpg?s=1024x1024&w=is&k=20&c=noWractOOW900ncsN6JAr8IzAjC7Ka9YMd-92xXD3FI=')
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)

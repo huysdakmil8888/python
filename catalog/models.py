@@ -1,4 +1,5 @@
 # categories/models.py
+import sys
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 import os
@@ -17,13 +18,18 @@ class itemBase(models.Model): # abstract base class
 class Category(itemBase):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='categories/%Y/%m', null=True, blank=True)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=False)
 
     class Meta:
         verbose_name_plural = 'Categories'
 
     def __str__(self):
-        return self.name 
+        return str(self.name)
+    def get_image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+        else:
+            return ''  # replace with the path to your default image
     
     def delete(self, *args, **kwargs):
         print('image',self.image.path)
